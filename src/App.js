@@ -1,10 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+// import { useDispatch, useSelector } from 'react-redux'
 
-function App() {
+// todo 安装redux来管理react组件，以及模拟数据源，并拿到电影数据进行显示
+const App = () => {
+/*    const dispatch = useDispatch()
+    useEffect(() => {
+        dispatch(fetchFoodsList())
+    }, [dispatch])*/
+    
+    
     return (
         <div className="App">
-            This is my React study demo!
+            This is my React study demo!😭
         </div>
     );
 }
