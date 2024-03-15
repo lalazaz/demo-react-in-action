@@ -1,19 +1,21 @@
 import './App.css';
-// import { useDispatch, useSelector } from 'react-redux'
+import MovieList from "./components/MovieInfo";
 
-// todo 安装redux来管理react组件，以及模拟数据源，并拿到电影数据进行显示
+
 const App = () => {
-/*    const dispatch = useDispatch()
-    useEffect(() => {
-        dispatch(fetchFoodsList())
-    }, [dispatch])*/
+    /*    const dispatch = useDispatch()
+        useEffect(() => {
+            dispatch()
     
-    
+        }, [dispatch])*/
+
     return (
         <div className="App">
             This is my React study demo!😭
+            <MovieList />
+            fda
         </div>
-    );
+    )
 }
 
 export default App;
