@@ -1,6 +1,6 @@
 import './App.css';
-import MovieList from "./components/MovieInfo";
-
+// import MovieList from "./components/MovieInfo";
+import Navigation from "./components/NavigationDemo";
 
 const App = () => {
     /*    const dispatch = useDispatch()
@@ -12,8 +12,8 @@ const App = () => {
     return (
         <div className="App">
             This is my React study demo!😭
-            <MovieList />
-            fda
+            {/*<MovieList/>*/}
+            <Navigation/>
         </div>
     )
 }
