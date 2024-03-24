@@ -2,15 +2,24 @@ import React from 'react';
 
 const Navigation = () => {
     return (
-        <div>
-            <h2>Navigation</h2>
-            <ul>
-                <li><a href="/">Home</a></li> {/* 外部链接 */}
-                <li><a href="/about">About</a></li> {/* 外部链接 */}
-                <li><a href="/contact">Contact</a></li> {/* 外部链接 */}
-                <li><a href="/internal">Internal Page</a></li> {/* 内部链接 */}
-                <li><a href="https://www.baidu.com">External Link</a></li> {/* 外部链接 */}
-            </ul>
+        <div className={"container"}>
+            <div className={"navigation"}>
+                <li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/internal">Internal Page</a></li>
+                    <li><a href="https://www.baidu.com">External Link</a></li>
+                    <li><a href="/project">myProject</a></li>
+                </li>
+            </div>
+            <div class={"form"}>
+                <label htmlFor="name">Name:</label><br/>
+                <input type="text" id="name" name="name"/><br/>
+                <label htmlFor="email">Email:</label><br/>
+                <input type="email" id="email" name="email"/><br/><br/>
+                <input type="submit" value="Submit"/>
+            </div>
         </div>
     );
 }

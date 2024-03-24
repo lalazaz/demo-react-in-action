@@ -1,3 +1,16 @@
+.container{
+  display: flex;
+  justify-content: space-between; /* 将内容分散排列 */
+  align-items: flex-start; /* 垂直对齐到顶部 */
+}
+.navigation {
+  flex: 1;
+  max-resolution: 20px;
+}
+.form{
+  flex: 1;
+}
+
 .App {
   text-align: center;
 }
