@@ -1,7 +1,7 @@
 .container{
   display: flex;
-  justify-content: space-between; /* 将内容分散排列 */
-  align-items: flex-start; /* 垂直对齐到顶部 */
+  justify-content: space-between;
+  align-items: flex-start; 
 }
 .navigation {
   flex: 1;

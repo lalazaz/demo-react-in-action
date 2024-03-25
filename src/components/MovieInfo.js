@@ -1,6 +1,6 @@
 import movieData from "../data/movieData.json"
 
-const MovieList = () => {
+const MovieInfo = () => {
     return (
         <div className={"movieList"}>
             <table>
@@ -27,4 +27,4 @@ const MovieList = () => {
     )
 }
 
-export default MovieList;
+export default MovieInfo;

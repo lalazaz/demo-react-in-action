@@ -10,7 +10,7 @@ const Navigation = () => {
                     <li><a href="/contact">Contact</a></li>
                     <li><a href="/internal">Internal Page</a></li>
                     <li><a href="https://www.baidu.com">External Link</a></li>
-                    <li><a href="/project">myProject</a></li>
+                    <li><a href="/MovieInfo.js">myProject</a></li>
                 </li>
             </div>
             <div class={"form"}>
