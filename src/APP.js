@@ -1,17 +1,13 @@
 import './css/App.css';
 import React from 'react';
-import {useNavigate} from 'react-router-dom';
+import useNavigatePage from "./services/NavigateService";
 
 function App() {
-    const goToPage = () => {
-        navigate('/page')
-    }
-
-    const navigate = useNavigate();
+    const goToPage = useNavigatePage();
     return (
         <div>
             <h3>this is App</h3>
-            <button onClick={goToPage}>Go to new Page</button>
+            <button onClick={goToPage}>Go to movie Page</button>
         </div>
     );
 }

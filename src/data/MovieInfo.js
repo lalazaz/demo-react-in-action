@@ -1,4 +1,4 @@
-import movieData from "../data/movieData.json"
+import movieData from "./movieData.json"
 
 const MovieInfo = () => {
     return (

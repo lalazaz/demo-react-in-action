@@ -1,7 +1,7 @@
 // App.js
 import React from 'react';
 import {createBrowserRouter} from 'react-router-dom';
-import Page from '../components/Page'
+import MoviePage from '../components/MoviePage'
 import APP from "../APP";
 
 const ReactRouterApp = [
@@ -11,7 +11,7 @@ const ReactRouterApp = [
     },
     {
         path: "page",
-        element: <Page></Page>
+        element: <MoviePage></MoviePage>
     }
 ]
 
