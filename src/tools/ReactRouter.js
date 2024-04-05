@@ -1,8 +1,9 @@
 // App.js
 import React from 'react';
 import {createBrowserRouter} from 'react-router-dom';
-import MoviePage from '../components/MoviePage'
+import MovieList from '../components/MovieList'
 import APP from "../APP";
+import MovieDetail from "../components/MovieDetail";
 
 const ReactRouterApp = [
     {
@@ -11,7 +12,11 @@ const ReactRouterApp = [
     },
     {
         path: "page",
-        element: <MoviePage></MoviePage>
+        element: <MovieList></MovieList>
+    },
+    {
+        path: "page/:movieId",
+        element: <MovieDetail></MovieDetail>
     }
 ]
 
