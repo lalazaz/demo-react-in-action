@@ -1,0 +1,41 @@
+.movie-details-container {
+    padding: 20px;
+}
+
+.movie-details-header {
+    display: flex;
+    align-items: flex-start; /* 垂直居上对齐 */
+    margin-bottom: 20px;
+}
+
+/*左边图片*/
+.movie-details-picture img {
+    max-width: 100%;
+    height: auto;
+}
+.movie-details-picture {
+    flex: 1;
+    width: 1000px;
+    height: 150px;
+    margin-right: 20px;
+}
+/*中间介绍*/
+.movie-details-detail {
+    flex: 3;
+    text-align: left;
+    border: 10px solid #61dafb;
+    border-radius: 5px;
+}
+/*右边打分*/
+.movie-details-rating {
+    flex: 1;
+    text-align: center;
+    padding: 100px;
+    border: 10px solid #ccc;
+    border-radius: 5px;
+}
+/*下面描述*/
+.movie-details-description {
+    margin-top: 20px;
+    text-align: justify;
+}

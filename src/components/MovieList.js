@@ -28,7 +28,7 @@ function MovieList() {
             <br/>
             <ul>
                 {movies.map(movie => (
-                    <li key={movie.MovieID}>
+                    <li key={movie.MovieID} className={"movie-list-item"}>
                         <Link to={`/page/${movie.MovieID}`} state={{movie}}>{movie.Title}</Link>
                     </li>
                     /*<div key={movie.MovieID} style={{marginBottom: '20px'}}>
