@@ -1,15 +1,32 @@
-import React from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 import {useLocation, useParams} from 'react-router-dom';
 import myImage from '../1.png'
 import '../css/movie-details.css'
 
-const MovieDetails = ({}) => {
-    // 这个useParams从url中找
+const MovieDetails = () => {
     const {movieId} = useParams();
     const location = useLocation();
-    // 直接从列表中拿数据
     const movie = location.state.movie;
-//    const movie = movies.find(movie => movie.MovieID === parseInt(movieId));
+
+    // 模拟计算评分
+    const [rating, setRating] = useState(null);
+    useEffect(() => {
+        const calculateRating = () => {
+            return (Math.random() * 9 + 1).toFixed(1);
+        };
+        // 启动一个计时器
+        const timeoutId = setTimeout(() => {
+            const result = calculateRating();
+            setRating(result);
+        }, Math.random() * 1000 + 1000);
+        return () => clearTimeout(timeoutId);
+    }, [movie]);
+    // 产生随机评论
+    const [comment, setComment] = useState(null)
+    useEffect(() => {
+        let uuid = Math.random() * 10000;
+        setComment(uuid);
+    }, [movie.Description]);
 
     if (!movie) return <div>电影未找到</div>;
 
@@ -24,12 +41,16 @@ const MovieDetails = ({}) => {
                     <p><strong>上映年份:</strong> {movie.ReleaseYear}</p>
                     <p><strong>导演:</strong> {movie.Director}</p>
                 </div>
-                <div className={"movie-details-rating"}>
-                    <p><strong>评分:</strong>9.5</p>
-                </div>
+                {rating != null ?
+                    (<div className={"movie-details-rating"}>
+                        <p><strong>评分:</strong>{rating}</p>
+                    </div>)
+                    :
+                    (<p className={"movie-details-rating"}><strong>评分计算中...</strong></p>)
+                }
             </div>
             <div className={"movie-description"}>
-                <p><strong>描述:</strong> {movie.Description}</p>
+                <p><strong>描述:</strong> {movie.Description} - {comment} </p>
             </div>
         </div>
     );
